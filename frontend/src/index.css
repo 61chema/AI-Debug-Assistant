@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Light mode (default) */
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #18181B;       /* zinc-900 */
+    background-color: #FAFAFA; /* zinc-50 */
+  }
+
+  /* Dark mode overrides */
+  html.dark body {
+    color: #E4E4E7;       /* zinc-200 */
+    background-color: #09090B; /* zinc-950 */
+  }
+
+  code, pre, .font-mono {
+    font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  }
+
+  /* Scrollbar — light */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #D4D4D8; border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: #A1A1AA; }
+
+  /* Scrollbar — dark */
+  html.dark ::-webkit-scrollbar-thumb { background: #27272A; }
+  html.dark ::-webkit-scrollbar-thumb:hover { background: #3F3F46; }
+}
+
+@layer components {
+  /* Primary CTA — indigo with glow (same in both themes) */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-indigo-600 hover:bg-indigo-500
+           text-white text-sm font-semibold
+           px-5 py-2.5 rounded-lg
+           shadow-[0_0_15px_rgba(99,102,241,0.2)]
+           hover:shadow-[0_0_20px_rgba(99,102,241,0.35)]
+           transition-all duration-150
+           disabled:opacity-30 disabled:cursor-not-allowed disabled:pointer-events-none;
+  }
+
+  /* Ghost secondary button */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           text-zinc-600 hover:text-zinc-900
+           dark:text-zinc-400 dark:hover:text-zinc-100
+           text-sm font-medium
+           border border-zinc-300 dark:border-zinc-800
+           hover:bg-zinc-100 dark:hover:bg-white/[0.05]
+           px-4 py-2 rounded-lg
+           transition-colors duration-150;
+  }
+
+  /* Card surface */
+  .card {
+    @apply bg-white border border-zinc-200 rounded-xl
+           dark:bg-zinc-900 dark:border-zinc-800;
+  }
+
+  /* Standard input / textarea */
+  .input {
+    @apply w-full
+           bg-white border border-zinc-300
+           text-zinc-900 text-sm
+           dark:bg-zinc-900 dark:border-zinc-800 dark:text-zinc-200
+           rounded-lg px-3 py-2.5
+           focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/10
+           placeholder:text-zinc-400 dark:placeholder:text-zinc-600
+           transition-colors duration-150;
+  }
+
+  textarea.input {
+    @apply resize-none;
+  }
+
+  /* Editor panel — code editor aesthetic */
+  .editor-panel {
+    @apply flex flex-col
+           bg-zinc-50 border border-zinc-200 rounded-xl overflow-hidden
+           dark:bg-black dark:border-zinc-800;
+  }
+
+  .editor-panel-header {
+    @apply h-10
+           bg-zinc-100 border-b border-zinc-200
+           dark:bg-zinc-950 dark:border-zinc-800
+           flex items-center justify-between px-4 shrink-0;
+  }
+
+  .editor-textarea {
+    @apply w-full
+           bg-transparent
+           text-zinc-800 dark:text-zinc-300
+           font-mono text-[13px] leading-6
+           resize-none p-4 outline-none
+           placeholder:text-zinc-400 dark:placeholder:text-zinc-700;
+  }
+}
