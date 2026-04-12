@@ -180,6 +180,6 @@ const translations = {
 export type TranslationKeys = keyof typeof translations.en;
 export type Translations = typeof translations.en;
 
-export function getTranslations(lang: AppLanguage): Translations {
+export function getTranslations(lang: AppLanguage) {
   return translations[lang];
 }
