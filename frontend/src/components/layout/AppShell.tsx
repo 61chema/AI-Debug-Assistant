@@ -3,7 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { Sidebar } from "./Sidebar";
 import { ToastContainer } from "../ui/Toast";
 import { LevelSelector } from "../ui/LevelSelector";
-import { Menu, Code2, Bug, FileText, Github, Clock, Home, Sun, Moon } from "lucide-react";
+import { Menu, Code2, Bug, FileText, Github, Clock, Home, Sun, Moon, Info } from "lucide-react";
 import { useConversationStore } from "../../store/conversationStore";
 import { useT } from "../../hooks/useT";
 import { clsx } from "clsx";
@@ -119,7 +119,12 @@ export function AppShell() {
 
         {/* Scrollable page content */}
         <main className="flex-1 overflow-y-auto">
-          <div className="max-w-4xl mx-auto px-6 py-8">
+          <div className="max-w-4xl mx-auto px-6 py-8 space-y-6">
+            {/* Usage notice — shown on every page */}
+            <div className="flex items-start gap-2.5 px-3.5 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/60 text-xs text-zinc-500 dark:text-zinc-500">
+              <Info className="w-3.5 h-3.5 mt-0.5 shrink-0 text-zinc-400" />
+              <span>{t.home_notice}</span>
+            </div>
             <Outlet />
           </div>
         </main>
