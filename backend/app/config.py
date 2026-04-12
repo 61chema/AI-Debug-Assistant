@@ -16,7 +16,7 @@ class Settings(BaseSettings):
 
     # Rate limiting — requests per IP address
     # Increase these if you want to be more permissive, lower them to be stricter.
-    rate_limit_per_minute: int = 5
+    rate_limit_per_minute: int = 10
     rate_limit_per_day: int = 20
 
     class Config:
