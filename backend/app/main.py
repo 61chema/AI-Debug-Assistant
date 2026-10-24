@@ -22,7 +22,7 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS — allows the React frontend (running on a different port) to talk to this API
+# CORS, allows the React frontend (running on a different port) to talk to this API
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[

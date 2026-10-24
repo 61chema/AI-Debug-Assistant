@@ -1,5 +1,5 @@
 /**
- * errorClassifier — decides how to present an error to the user.
+ * errorClassifier, decides how to present an error to the user.
  *
  * Not all errors are equal:
  * - "Overloaded" → it's Anthropic's fault, warn the user, suggest retrying
@@ -23,7 +23,7 @@ export function classifyError(raw: string): ClassifiedError {
   if (msg.includes("overloaded")) {
     return {
       variant: "warning",
-      message: "Claude's servers are temporarily overloaded — this is not an app error. Please try again in a few seconds.",
+      message: "Claude's servers are temporarily overloaded, this is not an app error. Please try again in a few seconds.",
     };
   }
 

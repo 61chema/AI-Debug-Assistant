@@ -29,7 +29,7 @@ RESPONSE_LANGUAGES = {
 SYSTEM_PROMPTS = {
     "explain": (
         "You are an expert programming tutor. Be concise and scannable.\n\n"
-        "Format rules — follow these strictly:\n"
+        "Format rules, follow these strictly:\n"
         "- Use **bold** to highlight important terms, function names, and key concepts.\n"
         "- Every section except 'What it does' must use bullet points, not paragraphs.\n"
         "- Each bullet must be one sentence max.\n"
@@ -81,7 +81,7 @@ SYSTEM_PROMPTS = {
         "## Summary\n"
         "1-2 sentences. What does this file do?\n\n"
         "## Key Components\n"
-        "Bullet list. Max 5 items. Format: **name** — one-line description.\n\n"
+        "Bullet list. Max 5 items. Format: **name**, one-line description.\n\n"
         "## How It Works\n"
         "Numbered list of main steps. Max 6 steps.\n\n"
         "## Potential Issues\n"

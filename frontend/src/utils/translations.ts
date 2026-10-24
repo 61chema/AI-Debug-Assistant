@@ -1,5 +1,5 @@
 /**
- * App translations — Spanish and English.
+ * App translations, Spanish and English.
  *
  * Add a key here and use it anywhere with the useT() hook.
  * Keys are grouped by feature/section.
@@ -28,7 +28,7 @@ const translations = {
     home_badge: "Powered by Claude Sonnet",
     home_title_1: "Your Personal Code",
     home_title_2: "Tutor",
-    home_subtitle: "Understand any code — at your level. From junior to senior, AI-powered explanations that grow with you.",
+    home_subtitle: "Understand any code, at your level. From junior to senior, AI-powered explanations that grow with you.",
     home_notice: "This is an open-source portfolio project. Usage is limited to 10 requests/min and 20 requests/day per IP to keep it free for everyone.",
     home_explain_title: "Explain Code",
     home_explain_desc: "Paste any code and get a clear explanation adapted to your level. Includes line-by-line annotations.",

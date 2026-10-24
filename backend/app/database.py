@@ -5,7 +5,7 @@ from app.config import settings
 # Create the async database engine
 engine = create_async_engine(settings.database_url, echo=False)
 
-# Session factory — each request gets its own session
+# Session factory, each request gets its own session
 AsyncSessionLocal = async_sessionmaker(engine, expire_on_commit=False)
 
 

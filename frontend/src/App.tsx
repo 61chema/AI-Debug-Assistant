@@ -11,7 +11,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* AppShell wraps all pages — provides the sidebar + layout */}
+        {/* AppShell wraps all pages, provides the sidebar + layout */}
         <Route element={<AppShell />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/explain" element={<ExplainPage />} />

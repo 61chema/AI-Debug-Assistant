@@ -1,5 +1,5 @@
 /**
- * useStream hook — handles SSE (Server-Sent Events) streaming from the backend.
+ * useStream hook, handles SSE (Server-Sent Events) streaming from the backend.
  *
  * SSE is like a one-way radio: the server keeps broadcasting text
  * and the browser listens. We use it to get Claude's response token by token.

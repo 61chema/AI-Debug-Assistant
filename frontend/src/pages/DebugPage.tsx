@@ -87,7 +87,7 @@ export function DebugPage() {
   return (
     <div className="space-y-5 animate-fade-in-up">
       <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Example chips — only shown when both fields are empty */}
+        {/* Example chips, only shown when both fields are empty */}
         {!errorMessage && !code && !isStreaming && (
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-[10px] font-semibold text-zinc-500 uppercase tracking-[0.08em]">
@@ -114,7 +114,7 @@ export function DebugPage() {
           </div>
         )}
 
-        {/* Split editor panels — side by side on large screens */}
+        {/* Split editor panels, side by side on large screens */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
           {/* Panel 1: Error / Stack trace */}
           <div className="editor-panel">

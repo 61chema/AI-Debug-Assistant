@@ -22,19 +22,19 @@
     font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
   }
 
-  /* Scrollbar — light */
+  /* Scrollbar, light */
   ::-webkit-scrollbar { width: 6px; height: 6px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: #D4D4D8; border-radius: 9999px; }
   ::-webkit-scrollbar-thumb:hover { background: #A1A1AA; }
 
-  /* Scrollbar — dark */
+  /* Scrollbar, dark */
   html.dark ::-webkit-scrollbar-thumb { background: #27272A; }
   html.dark ::-webkit-scrollbar-thumb:hover { background: #3F3F46; }
 }
 
 @layer components {
-  /* Primary CTA — indigo with glow (same in both themes) */
+  /* Primary CTA, indigo with glow (same in both themes) */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2
            bg-indigo-600 hover:bg-indigo-500
@@ -80,7 +80,7 @@
     @apply resize-none;
   }
 
-  /* Editor panel — code editor aesthetic */
+  /* Editor panel, code editor aesthetic */
   .editor-panel {
     @apply flex flex-col
            bg-zinc-50 border border-zinc-200 rounded-xl overflow-hidden

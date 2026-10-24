@@ -16,7 +16,7 @@ export function AppShell() {
   const location = useLocation();
   const t = useT();
 
-  // Page metadata for the top header — mapped by route
+  // Page metadata for the top header, mapped by route
   const PAGE_INFO = {
     "/":        { icon: Home,     color: "text-zinc-400",   title: t.nav_home,    subtitle: t.home_badge },
     "/explain": { icon: Code2,    color: "text-violet-400", title: t.nav_explain, subtitle: t.explain_subtitle },
@@ -40,7 +40,7 @@ export function AppShell() {
         />
       )}
 
-      {/* Sidebar dock — 68px fixed width */}
+      {/* Sidebar dock, 68px fixed width */}
       <aside
         className={clsx(
           "fixed lg:relative inset-y-0 left-0 z-30 w-[68px] flex-shrink-0",
@@ -57,7 +57,7 @@ export function AppShell() {
         {/* Top header bar */}
         <header className="h-[60px] border-b border-zinc-200 bg-white/90 dark:border-zinc-800 dark:bg-zinc-950/90 backdrop-blur-md flex items-center justify-between px-5 flex-shrink-0 z-10">
           <div className="flex items-center gap-3">
-            {/* Hamburger — mobile only */}
+            {/* Hamburger, mobile only */}
             <button
               onClick={() => setSidebarOpen(true)}
               className="lg:hidden text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors mr-1"
@@ -120,7 +120,7 @@ export function AppShell() {
         {/* Scrollable page content */}
         <main className="flex-1 overflow-y-auto">
           <div className="max-w-4xl mx-auto px-6 py-8 space-y-6">
-            {/* Usage notice — shown on every page */}
+            {/* Usage notice, shown on every page */}
             <div className="flex items-start gap-2.5 px-3.5 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/60 text-xs text-zinc-500 dark:text-zinc-500">
               <Info className="w-3.5 h-3.5 mt-0.5 shrink-0 text-zinc-400" />
               <span>{t.home_notice}</span>

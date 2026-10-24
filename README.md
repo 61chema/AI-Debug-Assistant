@@ -63,14 +63,14 @@ Frontend runs at: http://localhost:5173
 
 ## Daily workflow (once everything is installed)
 
-**Terminal 1 — backend:**
+**Terminal 1, backend:**
 ```bash
 cd backend
 source .venv/bin/activate
 uvicorn app.main:app --reload
 ```
 
-**Terminal 2 — frontend:**
+**Terminal 2, frontend:**
 ```bash
 cd frontend
 npm run dev

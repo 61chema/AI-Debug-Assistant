@@ -1,5 +1,5 @@
 """
-Rate limiter — in-memory sliding window implementation.
+Rate limiter, in-memory sliding window implementation.
 
 Protects the AI endpoints from excessive usage that would drain the
 Anthropic API budget. Tracks requests per IP address using two windows:
@@ -71,7 +71,7 @@ class RateLimiter:
                     headers={"Retry-After": "86400"},
                 )
 
-            # Request is within limits — record it
+            # Request is within limits, record it
             self._minute_store[ip].append(now)
             self._day_store[ip].append(now)
 
@@ -96,7 +96,7 @@ def _get_limiter() -> RateLimiter:
 
 async def rate_limit(request: Request) -> None:
     """
-    FastAPI dependency — inject with `Depends(rate_limit)` on any endpoint
+    FastAPI dependency, inject with `Depends(rate_limit)` on any endpoint
     that should be protected.
 
     Identifies the caller by their IP address (request.client.host).

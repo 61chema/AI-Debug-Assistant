@@ -1,4 +1,4 @@
-# Environment files — NEVER commit your API keys
+# Environment files, NEVER commit your API keys
 .env
 
 # Python
@@ -30,10 +30,3 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
-
-# Claude Code local config (contains project-specific permissions)
-.claude/
-
-# AIDesigner
-.aidesigner/*
-!.aidesigner/.gitkeep

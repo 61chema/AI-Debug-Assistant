@@ -1,5 +1,5 @@
 /**
- * languageDetector — detects the programming language of a code snippet
+ * languageDetector, detects the programming language of a code snippet
  * using simple heuristics (pattern matching).
  *
  * Not 100% accurate, but good enough to catch obvious mismatches

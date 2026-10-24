@@ -1,5 +1,5 @@
 /**
- * useT — returns the translation object for the current app language.
+ * useT, returns the translation object for the current app language.
  *
  * Usage:
  *   const t = useT();

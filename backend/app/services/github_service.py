@@ -1,5 +1,5 @@
 """
-GitHub service — fetches raw file content from public GitHub URLs.
+GitHub service, fetches raw file content from public GitHub URLs.
 
 Transforms a normal GitHub URL like:
   https://github.com/owner/repo/blob/main/src/utils.py
@@ -40,7 +40,7 @@ async def fetch_github_file(url: str) -> tuple[str, str]:
     Fetch raw content from a GitHub file URL.
 
     Returns:
-        (content, filename) — the file content as a string and the filename.
+        (content, filename), the file content as a string and the filename.
 
     Raises:
         HTTPException if the URL is invalid or the file can't be fetched.
@@ -50,7 +50,7 @@ async def fetch_github_file(url: str) -> tuple[str, str]:
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-    # Build headers — include GitHub token if available (avoids rate limiting)
+    # Build headers, include GitHub token if available (avoids rate limiting)
     headers = {"Accept": "text/plain"}
     if settings.github_token:
         headers["Authorization"] = f"Bearer {settings.github_token}"
